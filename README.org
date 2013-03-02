@@ -1,0 +1,4 @@
+* tff - Toggle friend file
+** Introduction
+Toggles between your friend files.
+** Customization
