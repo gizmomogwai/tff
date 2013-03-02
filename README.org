@@ -1,19 +1,37 @@
 * tff - Toggle friend file
 ** Introduction
 Toggles between your friend files.
+With this package it is very easy to navigate between correlated
+files.
 ** Customization
 tff is fully customizeable with emacs customize system. see
 customize-group tff.
 
 Best way to customize on a pre project basis is to use
 .dir-locals.el.
-If you happen to work in a project with .hpp files right next to .cpp
-files you could customize tff as follows:
+If you happen to work in a project with a setup like this:
+#+BEGIN_SRC
+.
+├── module.cpp
+├── module.hpp
+└── module_test.cpp
+#+END_SRC
+that means h files side by side with implementation and tests you
+could customize tff as follows:
 #+BEGIN_SRC emacs-lisp
 (
- (nil . (
-         (tff/patterns-and-replacements . (("\\(.*\\)\\.hpp" "\\1.cpp") ("\\(.*\\)\\.hpp" "\\1.cpp")))
-         )
+  (nil . ; all modes
+    (
+      (tff/patterns-and-replacements . ; our variable
+        (
+          ; pairs of regexps and replacements
+          ; replacements can reference groups
+          ("\\(.*\\)_test\\.cpp" "\\1.hpp") ; converts module_test.cpp -> module.hpp
+          ("\\(.*\\)\\.hpp" "\\1.cpp") ; converts module.hpp -> module.cpp
+          ("\\(.*\\)\\.cpp" "\\1_test.cpp") ; converts module.cpp -> module_test.cpp
+        )
       )
- )
+    )
+  )
+)
 #+END_SRC
