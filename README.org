@@ -2,3 +2,18 @@
 ** Introduction
 Toggles between your friend files.
 ** Customization
+tff is fully customizeable with emacs customize system. see
+customize-group tff.
+
+Best way to customize on a pre project basis is to use
+.dir-locals.el.
+If you happen to work in a project with .hpp files right next to .cpp
+files you could customize tff as follows:
+#+BEGIN_SRC emacs-lisp
+(
+ (nil . (
+         (tff/patterns-and-replacements . (("\\(.*\\)\\.hpp" "\\1.cpp") ("\\(.*\\)\\.hpp" "\\1.cpp")))
+         )
+      )
+ )
+#+END_SRC
