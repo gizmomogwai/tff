@@ -3,11 +3,12 @@
 Toggles between your friend files.
 With this package it is very easy to navigate between correlated
 files.
+
 ** Customization
-tff is fully customizeable with emacs customize system. see
+tff is fully customizable with Emacs customize system. see
 customize-group tff.
 
-Best way to customize on a pre project basis is to use
+Best way to customize on a per project basis is to use
 .dir-locals.el.
 If you happen to work in a project with a setup like this:
 #+BEGIN_SRC
