@@ -36,3 +36,4 @@ could customize tff as follows:
   )
 )
 #+END_SRC
+[[https://travis-ci.org/gizmomogwai/tff][https://img.shields.io/travis/gizmomogwai/tff/master.svg?style=flat-square]]
