@@ -10,7 +10,8 @@
 ;; Homepage: http://github.com/gizmomogwai/tff
 
 ;;; Commentary:
-;; Toggles between `friend' files, e.g. cpp and hpp. Please customize with `tff/patterns-and-replacements'.
+;; Toggles between `friend' files, e.g. cpp and hpp.  Please customize
+;; with `tff/patterns-and-replacements'.
 
 ;;; Code:
 
